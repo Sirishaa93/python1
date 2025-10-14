@@ -1,0 +1,15 @@
+import numpy as np  
+# a) To get help on the add function
+print("Help on numpy.add function:") 
+help(np.add)  
+# Creating arrays using array(), zeros(), ones(), linspace() 
+arr1 = np.array([5, 6, 7, 8])
+arr2 = np.array([8, 7, 6, 5])  
+zeros_arr = np.zeros(4) 
+ones_arr = np.ones(4) 
+lin_arr = np.linspace(0, 10, 5)  
+print("\nArray 1:", arr1) 
+print("Array 2:", arr2) 
+print("Zeros Array:", zeros_arr)
+print("Ones Array:", ones_arr)
+print("Linspace Array:", lin_arr)  
