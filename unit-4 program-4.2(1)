@@ -15,18 +15,3 @@ labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 df = pd.DataFrame(exam_data, index=labels) 
 print("Original DataFrame:\n")  
 print(df)  
-  
-# ii) Change the name 'Suresh' to 'Ramesh' 
-df.loc[df['name'] == 'Suresh', 'name'] = 'Ramesh' 
-print("\nDataFrame after changing name 'Suresh' to 'Ramesh':\n") 
-print(df)  
-  
-# iii) Insert a new column  
-df['age'] = [21, 23, 22, 20, 25, 24, 21, 22, 23, 20] 
-print("\nDataFrame after inserting new column 'age':\n") 
-print(df)  
-  
-# iv) Get list of column headers
-columns_list = df.columns.tolist() 
-print("\nList of column headers:") 
-print(columns_list)  
