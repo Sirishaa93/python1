@@ -1,0 +1,6 @@
+import numpy as np # Creating a sample array  
+arr = np.array([5, 2, 9, 7, 2, 8, 1, 9, 4])  
+print("Original Array:", arr)  
+# b) Find indices of maximum and minimum numbers 
+print("\nIndex of maximum number:", np.argmax(arr)) 
+print("Index of minimum number:", np.argmin(arr)) 
