@@ -8,10 +8,6 @@ greater_than_num = arr[arr > num]
 print("\nNumbers less than", num, ":", less_than_num) 
 print("Numbers greater than", num, ":", greater_than_num)  
   
-# b) Find indices of maximum and minimum numbers 
-print("\nIndex of maximum number:", np.argmax(arr)) 
-print("Index of minimum number:", np.argmin(arr))  
-  
 # Maximum and minimum values 
 print("Maximum value:", np.max(arr))  
 print("Minimum value:", np.min(arr))  
