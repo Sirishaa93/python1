@@ -1,0 +1,6 @@
+# b) To test whether none of the elements of a given array is zero 
+arr3 = np.array([1, 2, 3, 4])
+result = np.all(arr3)  
+print("\nNone of the elements are zero:", result)  
+arr4 = np.array([1, 0, 3, 4])  
+print("None of the elements are zero:", np.all(arr4))  
