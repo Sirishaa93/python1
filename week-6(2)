@@ -1,0 +1,44 @@
+def can_tomu_win(n, k, arr):
+    # Separate even and odd indexed elements
+    even = []
+    odd = []
+    
+    for i in range(n):
+        if i % 2 == 0:
+            even.append(arr[i])
+        else:
+            odd.append(arr[i])
+    
+    # Sort even descending (largest first)
+    even.sort(reverse=True)
+    
+    # Sort odd ascending (smallest first)
+    odd.sort()
+    
+    # Calculate initial sums
+    motu_score = sum(even)
+    tomu_score = sum(odd)
+    
+    # Perform at most k swaps
+    i = 0
+    while i < min(k, len(even), len(odd)):
+        if even[i] > odd[i]:
+            # Swap effect
+            motu_score -= even[i]
+            motu_score += odd[i]
+            
+            tomu_score -= odd[i]
+            tomu_score += even[i]
+        else:
+            break
+        i += 1
+    
+    return "YES" if tomu_score > motu_score else "NO"
+
+
+# Main driver code
+T = int(input())
+for _ in range(T):
+    N, K = map(int, input().split())
+    A = list(map(int, input().split()))
+    print(can_tomu_win(N, K, A))
